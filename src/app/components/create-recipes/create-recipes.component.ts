@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormControlName, FormGroup, Validators } from '@angular/forms';
-import { AlertMessageService } from '../services/alert-message.service';
-import { StrapiService } from '../services/strapi.service';
+import { AlertMessageService } from 'src/app/services/alert-message.service';
+import { StrapiService } from 'src/app/services/strapi.service';
 import { Ingredients } from './Interfaces/Ingredients';
 import IngredientsData from './jsonFile/ingredientsData.json'
 @Component({

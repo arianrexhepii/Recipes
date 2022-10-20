@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeRecipeComponent } from './home-recipe/home-recipe.component';
+import { HomeRecipeComponent } from './components/home-recipe/home-recipe.component';
 
 
 

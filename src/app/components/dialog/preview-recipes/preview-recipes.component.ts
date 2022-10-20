@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Inject, Output } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { TableRecipesComponent } from 'src/app/table-recipes/table-recipes.component';
+import { TableRecipesComponent } from '../../table-recipes/table-recipes.component';
 import { ConfirmAlertComponent } from '../confirm-alert/confirm-alert.component';
 import { DialogDataPreview } from '../Interfaces/DialogDataPreview'
 @Component({

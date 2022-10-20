@@ -2,7 +2,7 @@ import { Component, EventEmitter, Inject, Output } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { AlertMessageService } from 'src/app/services/alert-message.service';
 import { StrapiService } from 'src/app/services/strapi.service';
-import { TableRecipesComponent } from 'src/app/table-recipes/table-recipes.component';
+import { TableRecipesComponent } from '../../table-recipes/table-recipes.component';
 import { DialogDataConfirm } from '../Interfaces/DialogDataConfirm';
 @Component({
   selector: 'app-confirm-alert',

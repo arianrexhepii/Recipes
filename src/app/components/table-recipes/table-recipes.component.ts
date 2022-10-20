@@ -1,10 +1,9 @@
 import { ChangeDetectorRef, Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { StrapiService } from '../services/strapi.service';
-import { Subscription } from 'rxjs';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmAlertComponent } from '../dialog/confirm-alert/confirm-alert.component';
 import { PreviewRecipesComponent } from '../dialog/preview-recipes/preview-recipes.component';
+import { StrapiService } from 'src/app/services/strapi.service';
 
 
 @Component({
