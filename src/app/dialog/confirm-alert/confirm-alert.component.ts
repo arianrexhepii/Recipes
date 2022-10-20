@@ -3,7 +3,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { AlertMessageService } from 'src/app/services/alert-message.service';
 import { StrapiService } from 'src/app/services/strapi.service';
 import { TableRecipesComponent } from 'src/app/table-recipes/table-recipes.component';
-
+import { DialogDataConfirm } from '../Interfaces/DialogDataConfirm';
 @Component({
   selector: 'app-confirm-alert',
   templateUrl: './confirm-alert.component.html',
@@ -15,7 +15,7 @@ export class ConfirmAlertComponent {
 
   constructor(
     public dialogRef: MatDialogRef<TableRecipesComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData, private strapiServices: StrapiService, private alertService: AlertMessageService,) { }
+    @Inject(MAT_DIALOG_DATA) public data: DialogDataConfirm, private strapiServices: StrapiService, private alertService: AlertMessageService,) { }
 
   deleteRecipes() {
     //localStorage.removeItem('newRecipes')
@@ -32,7 +32,3 @@ export class ConfirmAlertComponent {
   }
 }
 
-export interface DialogData {
-  id: string;
-
-}

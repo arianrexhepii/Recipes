@@ -11,6 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ConfirmAlertComponent } from './dialog/confirm-alert/confirm-alert.component';
 import { PreviewRecipesComponent } from './dialog/preview-recipes/preview-recipes.component';
 import { CreateRecipesComponent } from './create-recipes/create-recipes.component';
+import { HomeRecipeComponent } from './home-recipe/home-recipe.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 
@@ -22,11 +24,13 @@ import { CreateRecipesComponent } from './create-recipes/create-recipes.componen
     TableRecipesComponent,
     ConfirmAlertComponent,
     PreviewRecipesComponent,
+    HomeRecipeComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    AppRoutingModule,
     MaterialModule,
     ReactiveFormsModule,
   ],
