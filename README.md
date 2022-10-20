@@ -14,7 +14,7 @@ Make sure you have the Angular CLI installed globally. I use NPM to manage the d
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ```shell
- git clone https://github.com/arianrexhepii/Recipes.git
+git clone https://github.com/arianrexhepii/Recipes.git
 npm install
 ng serve
 ```
@@ -26,7 +26,11 @@ After that you needed to clone the strapi repository: ` git clone https://github
  npm run develop
  ```
 
-## Build
+## Preview
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![screen1](https://user-images.githubusercontent.com/54391451/196899436-a206b548-e33f-4f00-8c71-20361a9829bf.PNG)
+![screen2](https://user-images.githubusercontent.com/54391451/196899460-bd2c95f8-5da4-4c51-bdb9-b71db51ad713.PNG)
+![screen3](https://user-images.githubusercontent.com/54391451/196899492-2c0a2be9-c01b-48d2-bdb3-fc56eff0f51d.PNG)
+![screen4](https://user-images.githubusercontent.com/54391451/196899499-388139de-8350-4d6e-8641-245c81e860de.PNG)
+
 
