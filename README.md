@@ -25,7 +25,11 @@ After that you needed to clone the strapi repository: ` git clone https://github
  npm install
  npm run develop
  ```
-
+## Technologies
+* Angular 13+
+* Strapi 4+
+* Angular Material 13+
+* Material Design 14
 ## Preview
 
 ![screen1](https://user-images.githubusercontent.com/54391451/196899436-a206b548-e33f-4f00-8c71-20361a9829bf.PNG)
