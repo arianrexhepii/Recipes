@@ -18,7 +18,7 @@
                         target="_blank">{{allDetailsRecipe.recipesSource}}</a></p>
                 <p>Ingredients: </p>
                 <p *ngFor="let ingredient of ingredients">{{ingredient.product}}: {{ingredient.quantity}}</p>
-                <p *ngIf="allDetailsRecipe.otherIngredient || allDetailsRecipe.otherQuantity">
+                <p *ngIf="allDetailsRecipe.otherIngredient && allDetailsRecipe.otherQuantity">
                     {{allDetailsRecipe.otherIngredient}}:
                     {{allDetailsRecipe.otherQuantity}}</p>
                 <p>Preparation time: {{allDetailsRecipe.recipesHours}}h : {{allDetailsRecipe.recipesMinutes}}m</p>
