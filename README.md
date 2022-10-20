@@ -12,8 +12,19 @@ You can quickly build your logic by fully customizing APIs, routes, or plugins t
 This repository is a starter with Angular for the frontend and Strapi for the backend.
 Make sure you have the Angular CLI installed globally. I use NPM to manage the dependencies, so we strongly recommend you to use it. you can install it from Here, then run npm install to resolve all dependencies (might take a minute).
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-After that you needed to clone the strapi repository: ` git clone https://github.com/arianrexhepii/recipes-cms.git `, next step is `npm install` to resolve all dependencies and the last is Run `npm run develop`.
 
+```shell
+ git clone https://github.com/arianrexhepii/Recipes.git
+npm install
+ng serve
+```
+
+After that you needed to clone the strapi repository: ` git clone https://github.com/arianrexhepii/recipes-cms.git `, next step is `npm install` to resolve all dependencies and the last is Run `npm run develop`.
+```shell
+ git clone https://github.com/arianrexhepii/recipes-cms.git
+ npm install
+ npm run develop
+ ```
 
 ## Build
 
