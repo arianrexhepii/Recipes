@@ -22,10 +22,6 @@ export class StrapiService {
   getAllRecipesList(): Observable<any> {
     return this.http.get(this.API_URL + '/api/recipes-lists?populate=*')
   }
-  // getRecipesByID(id): Observable<any> {
-  //   return this.http.get(this.API_URL + '/api/recipes-lists?populate=*' + id)
-  // }
-
   deleteRecipes(id): Observable<any> {
     return this.http.delete(this.API_URL + '/api/recipes-lists/' + id);
   }
