@@ -1,0 +1,134 @@
+<form [formGroup]="myForm">
+    <div class="mdc-layout-grid ">
+        <div class="mdc-layout-grid__inner">
+            <div
+                class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone">
+                <div class="example-button-container">
+                    <a mat-fab aria-label="add recipes" (click)="toggleAddMode()"
+                        class="{{addMode ? 'close-button' : 'add-recipes-button'}}">
+                        <span class="material-icons">
+                            {{addMode ? 'remove' : 'add'}}
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div
+                class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone">
+                <mat-card *ngIf="showActionCard">
+                    <mat-card-title class="title-font-style">Create <span>Recipes</span></mat-card-title>
+                    <mat-card-content>
+                        <form class="example-form">
+                            <div class="mdc-layout-grid ">
+                                <div class="mdc-layout-grid__inner">
+                                    <div
+                                        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone">
+                                        <mat-form-field class="input-full-width" appearance="outline">
+                                            <mat-label>Recipe Name</mat-label>
+                                            <input matInput type="text" formControlName="recipesName">
+                                        </mat-form-field>
+                                        <mat-form-field class="input-full-width" appearance="outline">
+                                            <mat-label>Recipe Source</mat-label>
+                                            <input matInput type="text" formControlName="recipesSource">
+                                        </mat-form-field>
+                                        <div class="mdc-layout-grid padding-0 ">
+                                            <div class="mdc-layout-grid__inner">
+                                                <div
+                                                    class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone">
+                                                    <mat-form-field class="input-full-width" appearance="outline">
+                                                        <mat-label>Preparation hours </mat-label>
+                                                        <input type="number" matInput name="hours" min="0" max="12"
+                                                            placeholder="0 to 12" formControlName="recipesHours">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div
+                                                    class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone">
+                                                    <mat-form-field class="input-full-width" appearance="outline">
+                                                        <mat-label>Preparation minutes </mat-label>
+                                                        <input type="number" matInput name="hours" min="0" max="60"
+                                                            placeholder="0 to 60" formControlName="recipesMinutes">
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone">
+
+                                        <div class="mdc-layout-grid padding-0" formArrayName="recipes"
+                                            *ngFor="let recipes of this.form?.value; let i = index; trackBy:trackByFn">
+                                            <div class="mdc-layout-grid__inner" [formGroupName]="i">
+                                                <div
+                                                    class="mdc-layout-grid__cell mdc-layout-grid__cell--span-5-desktop mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone">
+                                                    <mat-form-field class="input-full-width" appearance="outline">
+                                                        <mat-label>Ingredients</mat-label>
+                                                        <mat-select formControlName="product">
+                                                            <mat-option *ngFor="let ingredient of ingredients"
+                                                                [value]="ingredient.product">
+                                                                {{ingredient.product}}
+                                                            </mat-option>
+                                                        </mat-select>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div
+                                                    class="mdc-layout-grid__cell mdc-layout-grid__cell--span-5-desktop mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone">
+                                                    <mat-form-field class="input-full-width" appearance="outline">
+                                                        <mat-label>Quantity </mat-label>
+                                                        <input type="text" matInput name="quantity"
+                                                            formControlName="quantity">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone"
+                                                    *ngIf="myForm.value.recipes.length> 1">
+                                                    <span class="material-icons delete" (click)="removeGroup(i)">
+                                                        delete_forever
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a mat-button class="add-more-ingredient" (click)="addGroup()">
+                                            <span class="material-icons">
+                                                add
+                                            </span>Add Ingredient
+                                        </a>
+                                        <div class="mdc-layout-grid padding-0-tb-10">
+                                            <div class="mdc-layout-grid__inner">
+                                                <div
+                                                    class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone">
+
+                                                    <mat-form-field class="input-full-width" appearance="outline">
+                                                        <mat-label>Other Ingredient </mat-label>
+                                                        <input type="text" matInput formControlName="otherIngredient">
+                                                    </mat-form-field>
+                                                </div>
+                                                <div
+                                                    class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone">
+                                                    <mat-form-field class="input-full-width" appearance="outline">
+                                                        <mat-label>Quantity </mat-label>
+                                                        <input type="text" matInput formControlName="otherQuantity">
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone">
+                                        <mat-form-field class="input-full-width" appearance="outline">
+                                            <mat-label>Enter the Preparation Instructions</mat-label>
+                                            <textarea matInput rows="12"
+                                                formControlName="recipesInstructions"></textarea>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </mat-card-content>
+                    <mat-card-actions align="end">
+                        <button mat-button class="close-btn-card" (click)="toggleAddMode()">Close</button>
+                        <button mat-raised-button class="create-btn-card" (click)="createNewRecipes()"
+                            [disabled]="!myForm.valid">Create</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</form>

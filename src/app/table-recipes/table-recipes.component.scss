@@ -1,0 +1,48 @@
+table {
+  width: 100%;
+  display: block;
+  overflow: auto;
+}
+
+.button-action {
+  color: #ffa673;
+
+}
+
+.table-responsive {
+  .mat-table {
+    margin-bottom: 1rem;
+    display: table;
+    border-collapse: collapse;
+    margin: 0px;
+  }
+
+  .mat-row,
+  .mat-header-row {
+    display: table-row;
+  }
+
+  .mat-cell,
+  .mat-header-cell {
+    word-wrap: initial;
+    display: table-cell;
+    padding: 0px 20px;
+    line-break: unset;
+    width: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+}
+
+.padding-10 {
+  padding: 10px;
+}
+
+.background-card-simple {
+  background-color: #633621;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: Georgia, "Times New Roman", serif;
+}

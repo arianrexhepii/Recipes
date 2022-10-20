@@ -1,0 +1,26 @@
+.background-header{
+    background-color: white;
+}
+.text-center{
+    text-align: center;
+}
+.title-font-style{
+    font-weight: 600;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #633621;
+    padding: 10px;
+     
+    span{
+        color: #ffa673;
+    }
+}
+.fanpage-icons-position{
+    display: flex;
+    justify-content: center;
+
+    a img{
+        width: 25px;
+        height: 30px;
+        padding: 10px;
+    }
+}

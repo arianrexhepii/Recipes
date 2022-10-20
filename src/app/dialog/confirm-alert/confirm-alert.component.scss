@@ -1,0 +1,28 @@
+.dialog-title {
+    text-align: center;
+    margin: 5% auto;
+    font-size: 24px;
+    height: fit-content;
+    color: #000;
+}
+.dialog-content{
+    text-align: center;
+    padding-bottom: 30px;
+}
+.dialog-btn-container{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-top: 10px;
+}
+.close-dialog-btn{
+    width: 50%;
+    background-color: #ffd8d8;
+    color: #be0000;
+}
+.yes-dialog-btn{
+    width: 50%;
+    background-color:#d8f3dc;
+    color: #1b4332;;
+}

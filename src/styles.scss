@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+@import "@material/layout-grid/mdc-layout-grid";
+
+html,
+body {
+    height: 100%;
+    background-color: rgb(233, 233, 233);
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+
+
+/** Overrides label color **/
+.input-full-width.mat-form-field-appearance-outline .mat-form-field-label,
+.input-full-width.mat-form-field-appearance-outline.mat-focused .mat-form-field-label {
+    color: #633621;
+}
+
+/** Overrides caret & text color **/
+.input-full-width.mat-form-field-appearance-outline .mat-input-element {
+    caret-color: #ffa673;
+    color: #633621;
+}
+
+.mat-form-field-appearance-outline:not(.mat-form-field-disabled) .mat-form-field-flex:hover .mat-form-field-outline {
+    color: #633621;
+}
+
+.mat-form-field-appearance-outline:not(.mat-form-field-disabled) .mat-form-field-flex:hover .mat-form-field-outline {
+    color: #633621;
+}
+
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: #ffa673;
+}
+
+.backdropBackground {
+    background-color: #1a1a1ac2;
+}
+
+.success {
+    color: white !important;
+    background-color: #19AF1D !important;
+    border-color: #19AF1D !important;
+
+
+    .mat-button-wrapper {
+        color: white;
+    }
+
+}
+
+.error {
+    color: white !important;
+    background-color: #ff4040 !important;
+    border-color: #ff4040 !important;
+    text-transform: capitalize;
+
+    .mat-button-wrapper {
+        color: white;
+    }
+}

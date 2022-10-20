@@ -1,0 +1,76 @@
+<div
+    class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone padding-10">
+    <mat-card class="background-card-simple">Recipe List</mat-card>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table-responsive">
+
+        <!-- ID Column -->
+        <ng-container matColumnDef="Id" sticky>
+            <th mat-header-cell *matHeaderCellDef> ID</th>
+            <td mat-cell *matCellDef="let element">{{element.id}}</td>
+        </ng-container>
+
+        <!-- Recipe Name Column -->
+        <ng-container matColumnDef="Recipe Name" sticky>
+            <th mat-header-cell *matHeaderCellDef> Recipe Name </th>
+            <td mat-cell *matCellDef="let element">{{element.recipesName}}</td>
+        </ng-container>
+
+        <!-- Recipe Source Column -->
+        <ng-container matColumnDef="Recipe Source">
+            <th mat-header-cell *matHeaderCellDef> Recipe Source </th>
+            <td mat-cell *matCellDef="let element"><a href="{{element.recipesSource}}" target="_blank">
+                    {{element.recipesSource |
+                    slice:0:27}}{{element.recipesSource.length > 27 ? '...' : ''}}</a></td>
+        </ng-container>
+
+        <!-- Number of ingredients Column -->
+        <ng-container matColumnDef="Number of ingredients">
+            <th mat-header-cell *matHeaderCellDef> Number of ingredients </th>
+            <td mat-cell *matCellDef="let element">{{element.recipes.length}}</td>
+        </ng-container>
+
+        <!-- Ingredients Column -->
+        <ng-container matColumnDef="Ingredients">
+            <th mat-header-cell *matHeaderCellDef> Ingredients </th>
+            <td mat-cell *matCellDef="let element"> <span *ngFor="let i of element.recipes.slice(0,3)">{{
+                    i.product}}: {{ i.quantity }}, </span> {{element.recipes.length > 2 ? '...' : ''}}</td>
+
+        </ng-container>
+        <!-- Preparation Instructions Column -->
+        <ng-container matColumnDef="Preparation Instructions">
+            <th mat-header-cell *matHeaderCellDef> Preparation Instructions </th>
+            <td mat-cell matTooltip="{{element.recipesInstructions}}" *matCellDef="let element">
+                {{element.recipesInstructions |
+                slice:0:50}}{{element.recipesInstructions.length > 50 ? '...' : ''}}</td>
+
+        </ng-container>
+        <!-- Preparation time Column -->
+        <ng-container matColumnDef="Preparation time">
+            <th mat-header-cell *matHeaderCellDef> Preparation time</th>
+            <td mat-cell *matCellDef="let element">{{element.recipesHours}} hours :
+                {{element.recipesMinutes}} minutes</td>
+
+        </ng-container>
+        <!-- Action Column -->
+        <ng-container matColumnDef="Action">
+            <th mat-header-cell *matHeaderCellDef> Action </th>
+            <td mat-cell *matCellDef="let element">
+                <button mat-button class="button-action">
+                    <span class="material-icons" (click)="openDialogPreview(element.id)">
+                        preview
+                    </span>
+                </button>
+                <button mat-button color="warn">
+                    <span class="material-icons delete" (click)="openDialogConfirm(element.id)">
+                        delete_forever
+                    </span>
+                </button>
+            </td>
+
+        </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>

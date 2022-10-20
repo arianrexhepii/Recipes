@@ -1,0 +1,68 @@
+.title-font-style {
+  font-weight: 600;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #633621;
+  padding: 10px;
+
+  span {
+    color: #ffa673;
+  }
+}
+
+.padding-0-tb-10 {
+  padding: 0px;
+  padding-top: 40px;
+}
+
+.add-recipes-button {
+  background-color: #633621;
+}
+
+.close-button {
+  background-color: #ffa673;
+}
+
+.input-full-width {
+  width: 100%;
+}
+
+.padding-0 {
+  padding: 0;
+}
+
+.padding-right-3 {
+  padding-right: 3%;
+
+}
+
+.add-more-ingredient {
+  width: 170px;
+  border: 1px solid;
+  color: #633621;
+}
+
+.close-btn-card {
+  color: #fe4643;
+  border: 1px solid;
+}
+
+.create-btn-card {
+  background-color: #633621;
+  color: white;
+  width: 100px;
+}
+
+.mat-form-field-label {
+  color: #633621;
+}
+
+.mat-form-field-underline {
+  background-color: #633621;
+}
+
+.delete {
+  font-size: 28px;
+  color: red;
+  padding-top: 14px;
+  cursor: pointer;
+}
